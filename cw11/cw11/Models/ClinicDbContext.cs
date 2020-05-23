@@ -26,9 +26,12 @@ namespace cw11.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
+            base.OnModelCreating(modelBuilder);      
             modelBuilder.ApplyConfiguration(new Prescription_MedicamentEfConfiguration());
+            modelBuilder.ApplyConfiguration(new MedicamentEfConfiguration());
+            modelBuilder.ApplyConfiguration(new PatientEfConfiguration());
+            modelBuilder.ApplyConfiguration(new PrescriptionEfConfiguration());
+            modelBuilder.ApplyConfiguration(new DoctorEfConfiguration()); 
         }
         
         
