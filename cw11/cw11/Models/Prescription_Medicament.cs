@@ -8,9 +8,8 @@ namespace cw11.Models
 {
     public class Prescription_Medicament
     {
-        [Key]
+ 
         public int IdMedicament { get; set; }
-        [Key]
         public int IdPrescription { get; set; }
         public int Dose { get; set; }
         public string Details { get; set; }
