@@ -17,6 +17,16 @@ namespace cw11.Configurations
             builder.HasOne(e => e.Medicament).WithMany().HasForeignKey(e => e.IdMedicament);
             builder.Property("Details").
                 HasMaxLength(100);
+
+            var list = new List<Prescription_Medicament>();
+            list.Add(new Prescription_Medicament { IdMedicament = 3, IdPrescription = 1, Dose = 4, Details = "asdadadad" });
+            list.Add(new Prescription_Medicament { IdMedicament = 2, IdPrescription = 2, Dose = 8, Details = "dfgdgdgdfgdg" });
+            list.Add(new Prescription_Medicament { IdMedicament = 1, IdPrescription = 1, Dose = 20, Details = "sadadasfafsaf" });
+            list.Add(new Prescription_Medicament { IdMedicament = 2, IdPrescription = 3, Dose = 15, Details = "asdadafdsafsf" });
+            list.Add(new Prescription_Medicament { IdMedicament = 3, IdPrescription = 3, Dose = 10, Details = "asdasfsgfsgsg" });
+
+
+            builder.HasData(list);
         }
     }
 }
